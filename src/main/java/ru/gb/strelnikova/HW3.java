@@ -11,6 +11,7 @@ public class HW3 {
         fillInTheDiagonal();
         createAnArray(5, 3);
         findMaxMinValue();
+        checkBalance();
     }
 
     public static void replaceNumber() {
@@ -82,7 +83,20 @@ public class HW3 {
                 min = b[i];
             }
         }
-        System.out.printf("Максимальное значение массива : [%d]\n Минимальное значение массива : [%d] .", max, min );
+        System.out.printf("Максимальное значение массива : [%d]\n Минимальное значение массива : [%d] .", max, min);
+    }
+
+    public static void checkBalance() {
+        int[] arr = {2, 2, 2, 1, 2, 2, 10, 1};
+        boolean balanceExist = false;
+        int arrSum = 0;
+        int rightSum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            rightSum = rightSum + arr[i];
+            if (rightSum == arrSum - rightSum) {
+                balanceExist = true;
+            }
+        }
     }
 }
 
