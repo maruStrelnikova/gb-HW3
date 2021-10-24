@@ -8,6 +8,7 @@ public class HW3 {
         fillArray ();
         changeTheNumber();
         fillInTheDiagonal ();
+        createAnArray (5, 3);
     }
 
     public static void replaceNumber() {
@@ -51,5 +52,15 @@ public class HW3 {
             System.out.println();
         }
     }
+
+    public static int[] createAnArray(int len , int initialValue ) {
+        int [] arr = new int[len];
+        for (int i = 0; i < arr.length ; i++) {
+            arr [i] = initialValue;
+        }
+        System.out.println(Arrays.toString(arr));
+        return arr;
+    }
+
 }
 
